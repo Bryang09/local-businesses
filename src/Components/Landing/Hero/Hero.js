@@ -12,10 +12,10 @@ const Hero = props => {
       <Form
         zip={zip}
         search={search}
+        value={value}
         onZip={onZip}
         onSearch={onSearch}
         suggestions={suggestions}
-        value={value}
         onValue={onValue}
       />
     </div>

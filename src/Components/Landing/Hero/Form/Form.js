@@ -3,6 +3,8 @@ import React from "react";
 import "./Form.scss";
 
 import Options from "./Options/Options";
+import Zip from "./Zip/Zip";
+import Button from "./Button/Button";
 
 const Form = props => {
   const { zip, search, onZip, onSearch, suggestions, onValue, value } = props;
@@ -16,12 +18,7 @@ const Form = props => {
       <h2>Search For Businesses Near You!</h2>
       <form>
         <div className="inputs">
-          <input
-            type="text"
-            name="zip"
-            placeholder="Enter Zip Code"
-            onChange={onZip}
-          />
+          <Zip onZip={onZip} />
 
           {zip.length > 0 ? (
             <input
@@ -42,20 +39,7 @@ const Form = props => {
 
         <Options suggestions={suggestions} onValue={onValue} />
 
-        <a
-          href="https://bryan-gonzalez.com"
-          className={value.length === 0 ? "disabled" : null}
-        >
-          <h4
-            style={
-              value.length === 0
-                ? { background: "rgb(216, 216, 216)", color: "#333" }
-                : null
-            }
-          >
-            Search Now
-          </h4>
-        </a>
+        <Button value={value} zip={zip} />
       </form>
     </div>
   );

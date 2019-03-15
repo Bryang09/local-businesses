@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { key } from "../../keys";
+import { key, url } from "../../keys";
 
 import axios from "axios";
 
@@ -31,10 +31,9 @@ class Landing extends Component {
     this.setState({ search: e.target.value });
 
     axios
-      .get(
-        `${proxy}https://api.yelp.com/v3/autocomplete?text=${search}&location=${zip}`,
-        { headers: { Authorization: `Bearer ${key}` } }
-      )
+      .get(`${url}autocomplete?text=${search}&location=${zip}`, {
+        headers: { Authorization: `Bearer ${key}` }
+      })
       .then(res => this.setState({ suggestions: res.data.terms }))
       .catch(err => console.log(err));
   };
@@ -53,10 +52,10 @@ class Landing extends Component {
         <Hero
           zip={zip}
           search={search}
+          value={value}
           onZip={this.onZip}
           onSearch={this.onSearch}
           suggestions={suggestions}
-          value={value}
           onValue={this.onValue}
         />
       </div>
