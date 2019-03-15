@@ -1,0 +1,9 @@
+.Hero {
+  height: 100vh;
+  display: flex;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(https://images.unsplash.com/photo-1541475074124-af32f4cb0dbb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80)
+      no-repeat center center / cover;
+  justify-content: center;
+  align-items: center;
+}

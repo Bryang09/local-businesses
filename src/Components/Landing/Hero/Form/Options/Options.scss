@@ -1,0 +1,31 @@
+$red: #ff4a4a;
+
+.Options {
+  width: 40vw;
+  border: 1px solid #fff;
+  margin-bottom: 3vh;
+  display: flex;
+  color: #fff;
+
+  .suggestion {
+    width: 30%;
+    margin: 1vh 1.5%;
+    border: 1px solid #333;
+    text-align: center;
+    transition: 1s ease;
+
+    &:nth-child(1) {
+      background: $red;
+
+      &:hover {
+        background: darken($red, 5%);
+      }
+    }
+    &:nth-child(2) {
+      background: green;
+    }
+    &:nth-child(3) {
+      background: pink;
+    }
+  }
+}
