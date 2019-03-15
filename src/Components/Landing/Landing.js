@@ -12,7 +12,8 @@ class Landing extends Component {
   state = {
     zip: "",
     search: "",
-    suggestions: []
+    suggestions: [],
+    value: ""
   };
 
   onZip = e => {
@@ -38,10 +39,14 @@ class Landing extends Component {
       .catch(err => console.log(err));
   };
 
-  render() {
-    const { zip, search, suggestions } = this.state;
+  onValue = value => {
+    this.setState({ value: value });
+  };
 
-    console.log(suggestions);
+  render() {
+    const { zip, search, suggestions, value } = this.state;
+
+    console.log(suggestions, value);
 
     return (
       <div className="Landing">
@@ -51,6 +56,8 @@ class Landing extends Component {
           onZip={this.onZip}
           onSearch={this.onSearch}
           suggestions={suggestions}
+          value={value}
+          onValue={this.onValue}
         />
       </div>
     );

@@ -5,13 +5,15 @@ import "./Form.scss";
 import Options from "./Options/Options";
 
 const Form = props => {
-  const { zip, search, onZip, onSearch, suggestions } = props;
+  const { zip, search, onZip, onSearch, suggestions, onValue, value } = props;
 
   const length = zip.length === 0 || search.length === 0;
 
+  console.log(value.length);
+
   return (
     <div className="Form">
-      <h2>Hello</h2>
+      <h2>Search For Businesses Near You!</h2>
       <form>
         <div className="inputs">
           <input
@@ -38,15 +40,15 @@ const Form = props => {
           )}
         </div>
 
-        <Options suggestions={suggestions} />
+        <Options suggestions={suggestions} onValue={onValue} />
 
         <a
           href="https://bryan-gonzalez.com"
-          className={length ? "disabled" : null}
+          className={value.length === 0 ? "disabled" : null}
         >
           <h4
             style={
-              length
+              value.length === 0
                 ? { background: "rgb(216, 216, 216)", color: "#333" }
                 : null
             }

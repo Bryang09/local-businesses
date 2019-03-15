@@ -1,4 +1,6 @@
 $red: #ff4a4a;
+$blue: #58a2ff;
+$green: #56dca4;
 
 .Options {
   width: 40vw;
@@ -6,6 +8,7 @@ $red: #ff4a4a;
   margin-bottom: 3vh;
   display: flex;
   color: #fff;
+  animation: suggestions 1s ease;
 
   .suggestion {
     width: 30%;
@@ -13,6 +16,7 @@ $red: #ff4a4a;
     border: 1px solid #333;
     text-align: center;
     transition: 1s ease;
+    cursor: pointer;
 
     &:nth-child(1) {
       background: $red;
@@ -22,10 +26,27 @@ $red: #ff4a4a;
       }
     }
     &:nth-child(2) {
-      background: green;
+      background: $blue;
+
+      &:hover {
+        background: darken($blue, 5%);
+      }
     }
     &:nth-child(3) {
-      background: pink;
+      background: $green;
+
+      &:hover {
+        background: darken($green, 5%);
+      }
     }
+  }
+}
+
+@keyframes suggestions {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
