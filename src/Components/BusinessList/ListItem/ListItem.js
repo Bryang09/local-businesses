@@ -12,7 +12,7 @@ const ListItem = props => {
   const item = businesses.map(res => {
     return (
       <div className="ListItem" key={res.id}>
-        <Link to={`/res.id`}>
+        <Link to={`/${res.id}`}>
           <div
             className="img"
             style={{ backgroundImage: `url(${res.image_url})` }}
