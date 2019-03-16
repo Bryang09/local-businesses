@@ -1,0 +1,56 @@
+.ListItems {
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+
+  .ListItem {
+    width: 22%;
+    margin: 2vh 1.4%;
+    height: 50vh;
+    box-shadow: 1px 1px 80px #c5c5c5;
+
+    a {
+      color: #fff;
+    }
+
+    .img {
+      width: 100%;
+      height: 50%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      .rating {
+        background: green;
+        width: 25%;
+        text-align: center;
+
+        h5 {
+          font-weight: 400;
+        }
+      }
+    }
+    .info {
+      background: #eee;
+      display: flex;
+      justify-content: center;
+      height: 50%;
+
+      .infoContainer {
+        width: 90%;
+        margin-left: 5%;
+      }
+
+      h4 {
+        font-weight: 400;
+      }
+    }
+  }
+}
+
+// green #68ff68db
+// yellow #f6ff68db
+// red  #fb2828db
