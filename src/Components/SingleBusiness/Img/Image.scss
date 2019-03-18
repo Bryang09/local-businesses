@@ -1,0 +1,10 @@
+.Image {
+  display: flex;
+  align-items: center;
+  padding-left: 5vw;
+
+  img {
+    max-height: 75vh !important;
+    max-width: 40vw;
+  }
+}

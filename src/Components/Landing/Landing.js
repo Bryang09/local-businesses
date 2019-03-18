@@ -21,21 +21,24 @@ class Landing extends Component {
 
     this.setState({ zip: e.target.value });
   };
+
   onSearch = e => {
     e.preventDefault();
 
-    const { zip, search } = this.state;
-    // const header = `Authorization`: `Bearer Token ${key}`;
-    const proxy = "https://cors-anywhere.herokuapp.com/";
-
     this.setState({ search: e.target.value });
+  };
+
+  onSubmit = () => {
+    const { zip, search } = this.state;
 
     axios
-      .get(`${url}autocomplete?text=${search}&location=${zip}`, {
+      .get(`${url}/autocomplete?text=${search}&location=${zip}`, {
         headers: { Authorization: `Bearer ${key}` }
       })
       .then(res => this.setState({ suggestions: res.data.terms }))
       .catch(err => console.log(err));
+
+    console.log("click");
   };
 
   onValue = value => {
@@ -57,6 +60,7 @@ class Landing extends Component {
           onSearch={this.onSearch}
           suggestions={suggestions}
           onValue={this.onValue}
+          submit={this.onSubmit}
         />
       </div>
     );

@@ -1,3 +1,6 @@
+$red: #ff4a4a;
+$blue: #58a2ff;
+$green: #56dca4;
 .Form {
   width: 60vw;
   border: 1px solid #eee;
@@ -50,6 +53,8 @@
     transition: 1s ease;
     text-align: center;
     font-weight: 400;
+    color: #fff;
+    cursor: pointer;
 
     &:hover {
       background: #ff5959;
@@ -62,4 +67,5 @@
 .disabled {
   cursor: not-allowed;
   pointer-events: none;
+  background: #a5a0a3;
 }

@@ -5,7 +5,16 @@ import "./Hero.scss";
 import Form from "./Form/Form";
 
 const Hero = props => {
-  const { zip, search, onZip, onSearch, suggestions, onValue, value } = props;
+  const {
+    zip,
+    search,
+    onZip,
+    onSearch,
+    suggestions,
+    onValue,
+    value,
+    submit
+  } = props;
 
   return (
     <div className="Hero">
@@ -17,6 +26,7 @@ const Hero = props => {
         onSearch={onSearch}
         suggestions={suggestions}
         onValue={onValue}
+        submit={submit}
       />
     </div>
   );

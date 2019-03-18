@@ -7,9 +7,16 @@ import Zip from "./Zip/Zip";
 import Button from "./Button/Button";
 
 const Form = props => {
-  const { zip, search, onZip, onSearch, suggestions, onValue, value } = props;
-
-  const length = zip.length === 0 || search.length === 0;
+  const {
+    zip,
+    onZip,
+    onSearch,
+    suggestions,
+    onValue,
+    value,
+    submit,
+    search
+  } = props;
 
   console.log(value.length);
 
@@ -37,9 +44,13 @@ const Form = props => {
           )}
         </div>
 
-        <Options suggestions={suggestions} onValue={onValue} />
-
-        <Button value={value} zip={zip} />
+        <Button value={value} zip={zip} submit={submit} search={search} />
+        <Options
+          suggestions={suggestions}
+          onValue={onValue}
+          value={value}
+          zip={zip}
+        />
       </form>
     </div>
   );

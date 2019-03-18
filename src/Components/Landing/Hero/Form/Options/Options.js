@@ -1,18 +1,22 @@
 import React from "react";
 
+import { Link } from "react-router-dom";
 import "./Options.scss";
 
 const Options = props => {
   console.log(props);
-  // console.log(suggestions.length);
 
-  const { suggestions, onValue } = props;
+  const { suggestions, onValue, value, zip } = props;
 
   const suggestion = suggestions.map((res, i) => {
     return (
-      <div className="suggestion" key={i}>
-        <h5 onClick={() => onValue(res.text)}>{res.text}</h5>
-      </div>
+      <>
+        <Link to={`/${res.text}/${zip}`}>
+          <div className="suggestion" key={i}>
+            <h5>{res.text}</h5>
+          </div>
+        </Link>
+      </>
     );
   });
 

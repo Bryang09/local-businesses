@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import { url, header, key } from "../../keys";
+import { url, key } from "../../keys";
 
 import axios from "axios";
 
@@ -26,7 +26,7 @@ class List extends Component {
     const { businesses } = this.state;
     console.log(this.state.businesses);
 
-    const { query, zip } = this.props.match.params;
+    const { zip } = this.props.match.params;
     return (
       <div className="List">
         <h1>Searching for results near {zip}</h1>

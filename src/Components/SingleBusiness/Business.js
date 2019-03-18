@@ -4,9 +4,13 @@ import axios from "axios";
 
 import { url, key } from "../../keys";
 
+import Image from "./Img/Image";
+
+import "./Business.scss";
+
 class Business extends Component {
   state = {
-    business: []
+    business: ""
   };
 
   componentDidMount = () => {
@@ -16,15 +20,18 @@ class Business extends Component {
       .get(`${url}/businesses/${id}`, {
         headers: { Authorization: `Bearer ${key}` }
       })
-      .then(res => console.log(res.data))
+      .then(res => this.setState({ business: res.data }))
       .catch(err => console.log(err));
   };
   render() {
-    console.log(this.props);
+    const { business } = this.state;
+
+    console.log(business);
+    console.log(business === "");
 
     return (
       <div className="Business">
-        <h1>Business</h1>
+        {business !== "" ? <Image images={business} /> : <h1>Searching ...</h1>}
       </div>
     );
   }

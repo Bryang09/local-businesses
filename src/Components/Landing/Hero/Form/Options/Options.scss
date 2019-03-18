@@ -2,21 +2,64 @@ $red: #ff4a4a;
 $blue: #58a2ff;
 $green: #56dca4;
 
+// .Options {
+//   width: 40vw;
+//   border: 1px solid #fff;
+//   margin-top: 3vh;
+//   display: flex;
+//   color: #fff;
+//   animation: suggestions 1s ease;
+
+//   .suggestion {
+//     width: 30%;
+//     height: 15vh;
+//     margin: 1vh 1.5%;
+//     border: 1px solid #333;
+//     text-align: center;
+//     transition: 1s ease;
+//     cursor: pointer;
+//     a {
+//       width: 100%;
+//       height: 100%;
+//       h5 {
+//         margin: 0;
+//       }
+//     }
+
+//     &:nth-child(1) {
+//       background: $red;
+
+//       &:hover {
+//         background: darken($red, 5%);
+//       }
+//     }
+//     &:nth-child(2) {
+//       background: $blue;
+
+//       &:hover {
+//         background: darken($blue, 5%);
+//       }
+//     }
+//     &:nth-child(3) {
+//       background: $green;
+
+//       &:hover {
+//         background: darken($green, 5%);
+//       }
+//     }
+//   }
+// }
+
 .Options {
   width: 40vw;
   border: 1px solid #fff;
-  margin-bottom: 3vh;
-  display: flex;
-  color: #fff;
-  animation: suggestions 1s ease;
+  margin-top: 3vh;
 
-  .suggestion {
+  a {
     width: 30%;
-    margin: 1vh 1.5%;
-    border: 1px solid #333;
-    text-align: center;
+    margin: 1vh 1.6%;
     transition: 1s ease;
-    cursor: pointer;
+    animation: suggestions 1s ease;
 
     &:nth-child(1) {
       background: $red;
@@ -37,6 +80,15 @@ $green: #56dca4;
 
       &:hover {
         background: darken($green, 5%);
+      }
+    }
+
+    .suggestion {
+      width: 100%;
+      height: 100%;
+
+      h5 {
+        text-align: center;
       }
     }
   }
