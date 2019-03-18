@@ -5,6 +5,7 @@ import "./Form.scss";
 import Options from "./Options/Options";
 import Zip from "./Zip/Zip";
 import Button from "./Button/Button";
+import Search from "./Search/Search";
 
 const Form = props => {
   const {
@@ -26,24 +27,8 @@ const Form = props => {
       <form>
         <div className="inputs">
           <Zip onZip={onZip} />
-
-          {zip.length > 0 ? (
-            <input
-              type="text"
-              name="search"
-              placeholder="What Are You Searching For?"
-              onChange={onSearch}
-            />
-          ) : (
-            <input
-              type="text"
-              name="search"
-              placeholder="What Are You Searching For?"
-              disabled
-            />
-          )}
+          <Search onSearch={onSearch} />
         </div>
-
         <Button value={value} zip={zip} submit={submit} search={search} />
         <Options
           suggestions={suggestions}

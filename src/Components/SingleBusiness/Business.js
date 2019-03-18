@@ -37,7 +37,7 @@ class Business extends Component {
         {business !== "" ? (
           <Image images={business} />
         ) : (
-          <h1 style={{ textAlign: "center" }}>Searching ...</h1>
+          <h1 style={{ width: "100vw", textAlign: "center" }}>Searching ...</h1>
         )}
         {business !== "" ? <Info info={business} /> : ""}
       </div>
