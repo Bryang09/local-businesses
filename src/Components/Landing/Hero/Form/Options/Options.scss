@@ -91,6 +91,7 @@ $green: #56dca4;
 
       h5 {
         text-align: center;
+        font-weight: 400;
       }
     }
   }
@@ -103,4 +104,62 @@ $green: #56dca4;
   100% {
     opacity: 1;
   }
+}
+
+@media screen and (max-width: 1192px) {
+  .Options {
+    width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .Options {
+    width: 80vw;
+
+    a {
+      .suggestion {
+        h5 {
+          margin: 2.5vh auto;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .Options {
+    flex-direction: column;
+    border: none;
+    padding-bottom: 2vh;
+
+    a {
+      width: 80%;
+      margin: 1vh auto;
+
+      .suggestion {
+        h5 {
+          margin: 1.2vh auto;
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
+  .Options {
+    width: 80vw;
+    margin-bottom: 4vh;
+    border: none;
+
+    a {
+      .suggestion {
+        h5 {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
 }

@@ -14,6 +14,8 @@ $green: #56dca4;
   h2 {
     color: #fff;
     font-weight: 400;
+    font-size: 30px;
+    text-align: center;
   }
 
   form {
@@ -69,4 +71,68 @@ $green: #56dca4;
   cursor: not-allowed;
   pointer-events: none;
   background: #a5a0a3;
+}
+
+@media screen and (max-width: 1192px) {
+  .Form {
+    width: 80vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .Form {
+    width: 90vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .Form {
+    border: none;
+
+    .inputs {
+      width: 70%;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .Form {
+    h2 {
+      font-size: 25px;
+    }
+    .inputs {
+      width: 90%;
+    }
+
+    h4 {
+      font-size: 15px;
+      padding: 1vh 4vw;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
+  .Form {
+    min-height: 75vh;
+    max-height: 100%;
+
+    form {
+      justify-content: flex-start;
+    }
+
+    .inputs {
+      margin-bottom: 5vh;
+    }
+
+    input[type="text"] {
+      margin: 2vh auto;
+      padding: 2vh 0;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
+  .Form {
+    h2 {
+      font-size: 25px;
+    }
+  }
 }
