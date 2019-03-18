@@ -11,7 +11,55 @@
     margin-bottom: 10vh;
     align-self: flex-start;
     text-transform: capitalize;
-    width: 99vw;
+    width: 95vw;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 1192px) {
+  .List {
+    background: url(./ipad.svg) no-repeat center 0% / cover;
+  }
+}
+@media screen and (max-width: 768px) {
+  .List {
+    background: #333;
+
+    h1 {
+      color: #fff;
+      font-weight: 400;
+      margin: 12vh auto 4vh;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .List {
+    h1 {
+      width: 90vw;
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) and (min-aspect-ratio: 4/3) {
+  .List {
+    background: url(./ipad.svg) no-repeat center 0% / cover;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-aspect-ratio: 4/3) {
+  .List {
+    h1 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: 700px) and (min-aspect-ratio: 4/3) {
+  .List {
+    h1 {
+      color: #333;
+    }
   }
 }

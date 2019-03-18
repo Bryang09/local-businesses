@@ -41,7 +41,7 @@ const ListItem = props => {
               {res.location.display_address[1]}
             </h4>
             <h4>{res.display_phone}</h4>
-            <h4>Price Range: {res.price}</h4>
+            <h4>Price Range: {res.price ? res.price : "n/a"}</h4>
           </div>
         </div>
       </div>
