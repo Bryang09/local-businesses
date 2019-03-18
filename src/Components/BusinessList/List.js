@@ -7,6 +7,7 @@ import axios from "axios";
 import "./List.scss";
 
 import ListItem from "./ListItem/ListItem";
+import Nav from "../Nav/Nav";
 
 class List extends Component {
   state = {
@@ -29,6 +30,7 @@ class List extends Component {
     const { zip } = this.props.match.params;
     return (
       <div className="List">
+        <Nav />
         <h1>Searching for results near {zip}</h1>
         <ListItem businesses={businesses} />
       </div>

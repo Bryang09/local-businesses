@@ -1,0 +1,59 @@
+.Info {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .infoContainer {
+    h1 {
+      span {
+        color: #fff;
+        font-weight: 400;
+        padding: 0.2vh 0.2vw;
+      }
+      .great {
+        background: #42ec42;
+      }
+      .average {
+        background: #cbcd40;
+      }
+      .bad {
+        background: #fb2828db;
+      }
+    }
+    h2 {
+      font-weight: 400;
+    }
+    h3 {
+      font-weight: 400;
+
+      span {
+        padding: 0.3vh 1vw;
+      }
+    }
+
+    .button {
+      width: 10vw;
+
+      h4 {
+        border: 1px solid #333;
+        width: 100%;
+        text-align: center;
+        padding: 1vh 1vw;
+        color: #333;
+        transition: 0.6s ease;
+
+        &:hover {
+          background: #a18fdf;
+          color: #fff;
+          border: 1px solid #a18fdf;
+        }
+
+        a {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

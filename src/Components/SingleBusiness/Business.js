@@ -7,6 +7,8 @@ import { url, key } from "../../keys";
 import Image from "./Img/Image";
 
 import "./Business.scss";
+import Info from "./Info/Info";
+import Nav from "../Nav/Nav";
 
 class Business extends Component {
   state = {
@@ -31,7 +33,13 @@ class Business extends Component {
 
     return (
       <div className="Business">
-        {business !== "" ? <Image images={business} /> : <h1>Searching ...</h1>}
+        <Nav />
+        {business !== "" ? (
+          <Image images={business} />
+        ) : (
+          <h1 style={{ textAlign: "center" }}>Searching ...</h1>
+        )}
+        {business !== "" ? <Info info={business} /> : ""}
       </div>
     );
   }

@@ -7,6 +7,7 @@ import axios from "axios";
 import "./Landing.scss";
 
 import Hero from "./Hero/Hero";
+import Nav from "../Nav/Nav";
 
 class Landing extends Component {
   state = {
@@ -52,6 +53,7 @@ class Landing extends Component {
 
     return (
       <div className="Landing">
+        <Nav />
         <Hero
           zip={zip}
           search={search}
