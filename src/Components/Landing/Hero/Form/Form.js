@@ -19,8 +19,6 @@ const Form = props => {
     search
   } = props;
 
-  console.log(value.length);
-
   return (
     <div className="Form">
       <h2>Search For Businesses Near You!</h2>

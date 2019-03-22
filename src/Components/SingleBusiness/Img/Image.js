@@ -8,9 +8,9 @@ import "./Image.scss";
 const Image = props => {
   const { images } = props;
 
-  console.log(images.photos);
-
   const photos = images.photos;
+
+  const width = window.innerWidth;
 
   const imageGallery = photos.map(res => {
     return {
@@ -19,14 +19,15 @@ const Image = props => {
     };
   });
 
-  console.log(imageGallery);
-
   return (
     <div className="Image">
       <ImageGallery
         items={imageGallery}
         originalClass="image"
         thumbnailPosition="left"
+        lazyLoad={true}
+        showFullscreenButton={false}
+        showThumbnails={width <= 812 ? false : true}
       />
     </div>
   );

@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 const ListItem = props => {
   const { businesses } = props;
 
-  console.log(props);
-
   const item = businesses.map(res => {
     return (
       <div className="ListItem" key={res.id}>

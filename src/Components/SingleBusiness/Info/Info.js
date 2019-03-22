@@ -5,8 +5,6 @@ import "./Info.scss";
 const Info = props => {
   const { info } = props;
 
-  console.log(info);
-
   return (
     <div className="Info">
       <div className="infoContainer">
@@ -33,8 +31,8 @@ const Info = props => {
           <span
             style={
               info.is_closed
-                ? { background: "red", color: "#fff" }
-                : { background: "#42ec42", color: "#fff" }
+                ? { background: "#f75555" }
+                : { background: "#42ec42" }
             }
           >
             {info.is_closed ? "Closed" : "Open"}

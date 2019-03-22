@@ -4,9 +4,7 @@ import { Link } from "react-router-dom";
 import "./Options.scss";
 
 const Options = props => {
-  console.log(props);
-
-  const { suggestions, onValue, value, zip } = props;
+  const { suggestions, zip } = props;
 
   const suggestion = suggestions.map((res, i) => {
     return (

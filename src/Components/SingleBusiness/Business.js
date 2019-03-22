@@ -28,9 +28,6 @@ class Business extends Component {
   render() {
     const { business } = this.state;
 
-    console.log(business);
-    console.log(business === "");
-
     return (
       <div className="Business">
         <Nav />

@@ -3,9 +3,7 @@ import React from "react";
 // import { Link } from "react-router-dom";
 
 const Button = props => {
-  const { value, zip, submit, search } = props;
-
-  console.log(props);
+  const { zip, submit, search } = props;
 
   return (
     <>

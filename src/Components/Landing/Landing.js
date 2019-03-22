@@ -38,8 +38,6 @@ class Landing extends Component {
       })
       .then(res => this.setState({ suggestions: res.data.terms }))
       .catch(err => console.log(err));
-
-    console.log("click");
   };
 
   onValue = value => {
@@ -48,8 +46,6 @@ class Landing extends Component {
 
   render() {
     const { zip, search, suggestions, value } = this.state;
-
-    console.log(suggestions, value);
 
     return (
       <div className="Landing">

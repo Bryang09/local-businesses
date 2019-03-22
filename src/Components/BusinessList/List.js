@@ -25,7 +25,6 @@ class List extends Component {
   };
   render() {
     const { businesses } = this.state;
-    console.log(this.state.businesses);
 
     const { zip } = this.props.match.params;
     return (
